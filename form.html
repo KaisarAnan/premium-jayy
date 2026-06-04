@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Pembelian - Apk Premium Jayy</title>
+
+    <meta name="description" content="Form pembelian aplikasi premium dengan pembayaran QRIS.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Form CSS -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="form-page">
+
+        <div class="container">
+
+            <!-- =========================
+                 APP BANNER
+            ========================== -->
+            <section class="app-banner">
+
+                <div class="app-banner-image">
+                    <img
+                        src="assets/alight-motion-banner.jpg"
+                        alt="Alight Motion Banner"
+                        loading="lazy">
+                </div>
+
+                <div class="app-banner-content">
+
+                    <span class="safe-badge">
+                        Pembayaran Aman
+                    </span>
+
+                    <h1 class="app-title">
+                        Alight Motion Premium
+                    </h1>
+
+                    <p class="app-description">
+                        Pilih paket premium Alight Motion sesuai kebutuhan Anda.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- =========================
+                 STEP 1
+            ========================== -->
+            <section class="form-section">
+
+                <div class="section-header">
+
+    <span class="step-circle">1</span>
+
+    <div class="section-header-content">
+        <h2>Pilih Durasi & Nominal</h2>
+        <p>Pilih paket premium yang tersedia</p>
+    </div>
+
+</div>
+
+                <div class="package-list">
+
+                    <label class="package-card">
+
+                        <input
+                            type="radio"
+                            name="package"
+                            value="Alight Motion 1 Tahun Email Seller|5000">
+
+                        <div class="package-content">
+
+                            <h3>
+                                Alight Motion 1 Tahun
+                            </h3>
+
+                            <p>
+                                Email Seller
+                            </p>
+
+                            <strong>
+                                Rp5.000
+                            </strong>
+
+                        </div>
+
+                    </label>
+
+                    <label class="package-card">
+
+                        <input
+                            type="radio"
+                            name="package"
+                            value="Alight Motion 1 Tahun Email Customer|8000">
+
+                        <div class="package-content">
+
+                            <h3>
+                                Alight Motion 1 Tahun
+                            </h3>
+
+                            <p>
+                                Email Customer
+                            </p>
+
+                            <strong>
+                                Rp8.000
+                            </strong>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+            <!-- =========================
+                 STEP 2
+            ========================== -->
+            <section class="form-section">
+
+<div class="section-header">
+
+    <span class="step-circle">2</span>
+
+    <div class="section-header-content">
+        <h2>Metode Pembayaran</h2>
+        <p>Pembayaran cepat menggunakan QRIS</p>
+    </div>
+
+</div>
+
+                <div class="payment-list">
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="QRIS"
+                            checked>
+
+                        <div class="payment-content">
+
+                            <h3>QRIS</h3>
+
+                            <p>
+                                Pembayaran melalui QRIS
+                            </p>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+            <!-- =========================
+                 ORDER SUMMARY
+            ========================== -->
+            <section class="form-section">
+
+                <div class="section-header">
+
+<div class="section-header">
+
+<div class="section-header">
+
+    <span class="step-circle">3</span>
+
+    <div class="section-header-content">
+        <h2>Ringkasan Pesanan</h2>
+        <p>Detail pesanan Anda</p>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+                <div class="order-summary">
+
+                    <div class="summary-item">
+                        <span>Aplikasi</span>
+                        <strong id="summaryApp">
+                            Alight Motion Premium
+                        </strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Paket</span>
+                        <strong id="summaryPackage">
+                            Belum Dipilih
+                        </strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Pembayaran</span>
+                        <strong id="summaryPayment">
+                            QRIS
+                        </strong>
+                    </div>
+
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <strong id="summaryPrice">
+                            Rp0
+                        </strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =========================
+                 ACTION BUTTON
+            ========================== -->
+            <section class="checkout-section">
+
+                <a
+                    href="#"
+                    id="buyButton"
+                    class="buy-button">
+
+                    Beli Sekarang
+
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- =========================
+         TOAST CONTAINER
+    ========================== -->
+    <div
+        id="toastContainer"
+        class="toast-container"
+        aria-live="polite"
+        aria-atomic="true">
+    </div>
+
+    <!-- =========================
+         FORM SCRIPT
+    ========================== -->
+    <script src="form.js"></script>
+
+</body>
+</html>

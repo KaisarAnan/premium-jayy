@@ -1,0 +1,552 @@
+/* =========================================
+   RESET
+========================================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #07070c;
+    --bg-dark-2: #0f1020;
+    --bg-dark-3: #15172d;
+
+    --primary: #6f3cff;
+    --secondary: #00b7ff;
+
+    --white: #ffffff;
+    --text-dark: #1d1d1f;
+    --text-light: #6b7280;
+
+    --border: #e8e8ee;
+
+    --success: #18c964;
+
+    --radius-sm: 16px;
+    --radius-md: 22px;
+    --radius-lg: 28px;
+
+    --shadow-card:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    --shadow-glow:
+        0 0 25px rgba(111, 60, 255, 0.30);
+
+    --transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(111, 60, 255, 0.25),
+            transparent 35%),
+        radial-gradient(circle at top right,
+            rgba(0, 183, 255, 0.18),
+            transparent 30%),
+        linear-gradient(
+            135deg,
+            var(--bg-dark),
+            var(--bg-dark-2),
+            var(--bg-dark-3)
+        );
+
+    color: var(--white);
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-page {
+    padding: 20px 0 60px;
+}
+
+/* =========================================
+   BANNER
+========================================= */
+
+.app-banner {
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    background: #ffffff;
+
+    box-shadow: var(--shadow-card);
+
+    margin-bottom: 20px;
+
+    transition: var(--transition);
+}
+
+.app-banner:hover {
+    transform: translateY(-3px);
+}
+
+.app-banner-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.app-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-banner-content {
+    padding: 22px;
+}
+
+.safe-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #00c853,
+        #00e676
+    );
+
+    margin-bottom: 14px;
+}
+
+.app-title {
+    color: var(--text-dark);
+
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.app-subtitle {
+    color: var(--text-light);
+
+    line-height: 1.7;
+}
+
+/* =========================================
+   CARD SECTION
+========================================= */
+
+.form-section,
+.advantages-section {
+    background: #ffffff;
+
+    border-radius: var(--radius-lg);
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--shadow-card);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   STEP CIRCLE
+========================================= */
+
+.form-section .section-header h2:first-child {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+
+    box-shadow:
+        0 0 20px rgba(111, 60, 255, 0.45),
+        0 0 35px rgba(0, 183, 255, 0.30);
+}
+
+/* =========================================
+   ADVANTAGES
+========================================= */
+
+.advantages-list {
+    display: grid;
+    gap: 14px;
+}
+
+.advantage-item {
+    padding: 18px;
+
+    border-radius: 18px;
+
+    background: #f8f9ff;
+
+    border: 1px solid #edf0ff;
+}
+
+.advantage-item h3 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.advantage-item p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.92rem;
+}
+
+/* =========================================
+   PACKAGE GRID
+========================================= */
+
+.package-list {
+    display: grid;
+    gap: 14px;
+}
+
+.package-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.package-card input {
+    display: none;
+}
+
+.package-content {
+    position: relative;
+
+    padding: 18px;
+
+    border-radius: 22px;
+
+    border: 2px solid #ececf2;
+
+    background: #ffffff;
+
+    transition: var(--transition);
+}
+
+.package-content::after {
+    content: "BEST SELLER";
+
+    position: absolute;
+
+    top: -10px;
+    right: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #ff9800,
+        #ffb300
+    );
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+}
+
+.package-content h3 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.package-content p {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.package-content strong {
+    color: var(--primary);
+    font-size: 1.15rem;
+}
+
+.package-card:hover .package-content {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 20px rgba(111, 60, 255, 0.20);
+}
+
+.package-card input:checked + .package-content {
+    border-color: var(--primary);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(111, 60, 255, 0.06),
+            rgba(0, 183, 255, 0.05)
+        );
+
+    box-shadow:
+        0 0 25px rgba(111, 60, 255, 0.30);
+}
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.payment-list {
+    display: grid;
+    gap: 14px;
+}
+
+.payment-card {
+    cursor: pointer;
+}
+
+.payment-card input {
+    display: none;
+}
+
+.payment-content {
+    padding: 18px;
+
+    border-radius: 22px;
+
+    border: 2px solid #ececf2;
+
+    transition: var(--transition);
+}
+
+.payment-content h3 {
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.payment-content p {
+    color: var(--text-light);
+}
+
+.payment-card:hover .payment-content {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 20px rgba(0, 183, 255, 0.20);
+}
+
+.payment-card input:checked + .payment-content {
+    border-color: var(--secondary);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 183, 255, 0.08),
+            rgba(111, 60, 255, 0.05)
+        );
+}
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #ececf2;
+}
+
+.summary-item span {
+    color: var(--text-light);
+}
+
+.summary-item strong {
+    color: var(--text-dark);
+}
+
+.summary-item.total {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.summary-item.total strong {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.checkout-section {
+    margin-top: 24px;
+}
+
+.buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 62px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 0 25px rgba(111, 60, 255, 0.35),
+        0 0 40px rgba(0, 183, 255, 0.20);
+
+    transition: var(--transition);
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 30px rgba(111, 60, 255, 0.45),
+        0 0 50px rgba(0, 183, 255, 0.30);
+}
+
+.buy-button:active {
+    transform: scale(0.97);
+}
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast-container {
+    position: fixed;
+
+    right: 16px;
+    bottom: 16px;
+
+    z-index: 9999;
+
+    width: calc(100% - 32px);
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.toast {
+    background: #ffffff;
+
+    color: var(--text-dark);
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (min-width: 640px) {
+
+    .package-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 14px;
+    }
+
+    .app-title {
+        font-size: 1.4rem;
+    }
+
+    .buy-button {
+        height: 58px;
+    }
+}
